@@ -1,0 +1,15 @@
+{
+  "name": "edutask",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tailwindcss": "pnpx tailwindcss -i ./src/static/styles/main.css -o ./src/static/styles/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Luis Eduardo Ocegueda Cortés",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}
