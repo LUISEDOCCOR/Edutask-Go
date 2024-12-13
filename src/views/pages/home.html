@@ -21,7 +21,7 @@
                     Unete a la lista!
                 </a>
                 <span class="text-orange-500 text-xl italic"
-                    >¡Más de 20 personas apuntadas!</span
+                    >¡Más de {{ counter }} personas apuntadas!</span
                 >
             </div>
         </section>
@@ -76,7 +76,7 @@
             </ul>
         </div>
     </section>
-    <section class="flex flex-col items-center gap-4">
+    <section class="flex flex-col items-center gap-4" id="join">
         <h2 class="text-4xl font-semibold">
             Experimenta la aplicación de tareas definitiva
         </h2>
@@ -87,17 +87,21 @@
         <h4 class="text-sm">
             Suscríbete para recibir una notificación cuando lancemos.
         </h4>
-        <form class="w-full flex justify-center gap-4">
+        <form
+            action="/api/waitinglist/"
+            method="POST"
+            class="w-full flex justify-center gap-4"
+        >
             <input
                 aria-label="correo"
                 class="border border-1 outline-none px-2 py-3 rounded-md text-lg w-full max-w-md"
                 type="email"
                 placeholder="Correo"
+                name="email"
                 required
             />
             <button
                 class="border border-1 text-xl bg-white text-black px-8 py-3 rounded-md hover:opacity-65 transition-opacity"
-                href="#join"
             >
                 Unirme
             </button>
